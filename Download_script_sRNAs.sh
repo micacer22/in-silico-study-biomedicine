@@ -20,13 +20,11 @@ while read -r SRR_ID; do
     echo "Descargando: $SRR_ID" | tee -a "$LOG_FILE"
     
     # Descargar el archivo .sra
-    prefetch -v "$SRR_ID" -o "$OUTPUT_DIR/$SRR_ID.sra" >> 
-    "$LOG_FILE" 2>&1
+    prefetch -v "$SRR_ID" -o "$OUTPUT_DIR/$SRR_ID.sra" >> "$LOG_FILE" 2>&1
 
     # Verificar la descarga 
     if [[ $? -ne 0 ]]; then
-        echo "Error al descargar $SRR_ID. Saltando." | 
-        tee -a "$LOG_FILE"
+        echo "Error al descargar $SRR_ID. Saltando." | tee -a "$LOG_FILE"
         continue
     fi
 
@@ -38,8 +36,7 @@ while read -r SRR_ID; do
 
     # Verificar la extraccion 
     if [[ $? -ne 0 ]]; then
-    echo "Error al extraer $SRR_ID. Saltando." | 
-    tee -a "$LOG_FILE"
+    echo "Error al extraer $SRR_ID. Saltando." | tee -a "$LOG_FILE"
     continue
     fi
 
@@ -47,7 +44,6 @@ while read -r SRR_ID; do
 done < "$SRR_LIST"
 
 echo "Proceso terminado." | tee -a "$LOG_FILE"
-\end{lstlisting}
 
 ## Download script for Illumina adapters ##
 #!/bin/bash
@@ -71,26 +67,22 @@ while read -r SRR_ID; do
     echo "Descargando: $SRR_ID" | tee -a "$LOG_FILE"
     
     # Descargar el archivo .sra
-    prefetch -v "$SRR_ID" -o "$OUTPUT_DIR/$SRR_ID.sra" >> 
-    "$LOG_FILE" 2>&1
+    prefetch -v "$SRR_ID" -o "$OUTPUT_DIR/$SRR_ID.sra" >> "$LOG_FILE" 2>&1
     
     # Verificar la descarga 
     if [[ $? -ne 0 ]]; then
-        echo "Error al descargar $SRR_ID. Saltando." | 
-        tee -a "$LOG_FILE"
+        echo "Error al descargar $SRR_ID. Saltando." | tee -a "$LOG_FILE"
         continue
     fi
     
     echo "Extrayendo FASTQ: $SRR_ID" | tee -a "$LOG_FILE"
     
     # Extraer a FASTQ comprimido
-    fastq-dump --gzip --outdir "$OUTPUT_DIR" 
-    "$OUTPUT_DIR/$SRR_ID.sra" >> "$LOG_FILE" 2>&1
+    fastq-dump --gzip --outdir "$OUTPUT_DIR" "$OUTPUT_DIR/$SRR_ID.sra" >> "$LOG_FILE" 2>&1
     
     # Verificar la extraccion
     if [[ $? -ne 0 ]]; then
-        echo "Error al extraer $SRR_ID. Saltando." | 
-        tee -a "$LOG_FILE"
+        echo "Error al extraer $SRR_ID. Saltando." | tee -a "$LOG_FILE"
         continue
     fi
 
