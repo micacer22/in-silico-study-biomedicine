@@ -14,5 +14,11 @@ done
 # Ordenar archivos .bam separados
 nohup bash -c 'for bamfile in SRR*_trimmed.bam; do samtools sort $bamfile -o ${bamfile%.bam}_sorted.bam; done' &
 
+# Generar los flagstats de los archivos BAM ordenados
+nohup bash -c 'for file in *_sorted.bam; do samtools flagstat "$file" > "${file%.bam}_flagstat.txt"; done' &  
+
 # Indexar archivos _soted.bam
 nohup bash -c 'for file in *_trimmed_sorted.bam; do samtools index "$file"; done' > index.log 2>&1 &
+
+
+
