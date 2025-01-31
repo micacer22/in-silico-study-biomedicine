@@ -41,7 +41,7 @@ bash scripts/alignment_sRNAs.sh
 
 ### **4. Differential Expression Analysis**    
 ```bash
-bash scripts/alignment_sRNAs.sh
+bash scripts/featureCounts_sRNAs.sh
 ```
 
 ### **5. Visualization in IGV**  
