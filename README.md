@@ -1,13 +1,9 @@
 # in-silico-study-biomedicine
-“The role of small RNAs in the epigenetic control of plant virus-responsive genes.”
-El README debe proporcionar una visión clara y concisa del proyecto, incluyendo su propósito, requisitos, cómo ejecutarlo y otros detalles relevantes. Aquí tienes un ejemplo adaptado a tu proyecto:  
 
----
+# The Role of Small RNAs in the Epigenetic Control of Plant Virus-Responsive Genes  
 
-# **The Role of Small RNAs in the Epigenetic Control of Plant Virus-Responsive Genes**  
-
-## **Descripción**  
-Este proyecto investiga el papel de los pequeños RNAs (sRNAs) en la regulación epigenética de genes de respuesta a virus en *Arabidopsis thaliana*. Se analiza la expresión diferencial de sRNAs en mutantes epigenéticos y su relación con elementos transponibles (TEs) cercanos a genes de respuesta viral.  
+## Descripción
+Este proyecto investiga el papel de los pequeños RNAs (sRNAs) en la regulación epigenética de genes de respuesta a virus en Arabidopsis thaliana. Se analiza la expresión diferencial de sRNAs en mutantes epigenéticos y su relación con elementos transponibles (TEs) cercanos a genes de respuesta viral.  
 
 ## **Estructura del Proyecto**  
 📂 **data/** – Archivos de entrada, incluyendo datos de secuenciación.  
@@ -26,17 +22,16 @@ Este proyecto investiga el papel de los pequeños RNAs (sRNAs) en la regulación
   - Samtools  
   - IGV  
   - featureCounts  
-  - R (paquetes: `DESeq2`, `edgeR`)  
 
-## **Instrucciones de Uso**  
+## Instrucciones de Uso
 
-### **1. Descarga de Datos**  
+### 1. Descarga de Datos
 Ejecutar el script para descargar los datos de sRNAs desde GEO/SRA:  
 ```bash
 bash scripts/download_srna_data.sh
 ```
 
-### **2. Control de Calidad y Preprocesamiento**  
+### 2. Control de Calidad y Preprocesamiento 
 ```bash
 bash scripts/preprocessing.sh
 ```
