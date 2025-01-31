@@ -26,7 +26,7 @@ This project investigates the role of small RNAs (sRNAs) in the epigenetic regul
 ### **1. Download Data**  
 Run the script to download sRNA sequencing data from GEO/SRA:  
 ```bash
-bash scripts/download_srna_data.sh
+bash scripts/Download_script_sRNAs.sh
 ```
 
 ### **2. Quality Control and Preprocessing**  
@@ -39,10 +39,9 @@ bash scripts/data_preprocessing.sh
 bash scripts/alignment_sRNAs.sh
 ```
 
-### **4. Differential Expression Analysis**  
-Run in R:  
-```r
-source("scripts/diff_expression_analysis.R")
+### **4. Differential Expression Analysis**    
+```bash
+bash scripts/alignment_sRNAs.sh
 ```
 
 ### **5. Visualization in IGV**  
