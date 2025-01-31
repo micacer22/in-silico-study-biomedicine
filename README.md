@@ -6,7 +6,6 @@ This project investigates the role of small RNAs (sRNAs) in the epigenetic regul
 ## **Project Structure**  
 📂 **scripts/** – Bash and R scripts for data analysis.  
 📄 **README.md** – This document.  
-📄 **main.tex** – Main LaTeX manuscript file.  
 
 ## **Requirements**  
 - Operating system: Linux or macOS (HPC with SLURM recommended).  
