@@ -20,7 +20,6 @@ This project investigates the role of small RNAs (sRNAs) in the epigenetic regul
   - Samtools  
   - IGV  
   - featureCounts  
-  - R (packages: `DESeq2`, `edgeR`)  
 
 ## **Usage Instructions**  
 
@@ -37,7 +36,7 @@ bash scripts/preprocessing.sh
 
 ### **3. Sequence Alignment**  
 ```bash
-bash scripts/alignment.sh
+bash scripts/alignment_sRNAs.sh
 ```
 
 ### **4. Differential Expression Analysis**  
