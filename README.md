@@ -4,7 +4,7 @@
 This project investigates the role of small RNAs (sRNAs) in the epigenetic regulation of virus-responsive genes in *Arabidopsis thaliana*. It analyzes the differential expression of sRNAs in epigenetic mutants and their relationship with nearby transposable elements (TEs).  
 
 ## **Project Structure**  
-📂 **scripts/** – Bash and R scripts for data analysis.  
+📂 **scripts/** – Bash scripts for data analysis.  
 📄 **README.md** – This document.  
 
 ## **Requirements**  
