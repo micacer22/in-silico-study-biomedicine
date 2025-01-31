@@ -31,7 +31,7 @@ bash scripts/download_srna_data.sh
 
 ### **2. Quality Control and Preprocessing**  
 ```bash
-bash scripts/preprocessing.sh
+bash scripts/data_preprocessing.sh
 ```
 
 ### **3. Sequence Alignment**  
