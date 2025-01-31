@@ -1,20 +1,18 @@
-# in-silico-study-biomedicine
+# **The Role of Small RNAs in the Epigenetic Control of Plant Virus-Responsive Genes**  
 
-# The Role of Small RNAs in the Epigenetic Control of Plant Virus-Responsive Genes  
+## **Description**  
+This project investigates the role of small RNAs (sRNAs) in the epigenetic regulation of virus-responsive genes in *Arabidopsis thaliana*. It analyzes the differential expression of sRNAs in epigenetic mutants and their relationship with nearby transposable elements (TEs).  
 
-## Descripción
-Este proyecto investiga el papel de los pequeños RNAs (sRNAs) en la regulación epigenética de genes de respuesta a virus en Arabidopsis thaliana. Se analiza la expresión diferencial de sRNAs en mutantes epigenéticos y su relación con elementos transponibles (TEs) cercanos a genes de respuesta viral.  
+## **Project Structure**  
+📂 **data/** – Input files, including sequencing data.  
+📂 **scripts/** – Bash and R scripts for data analysis.  
+📂 **results/** – Intermediate and final analysis results.  
+📄 **README.md** – This document.  
+📄 **main.tex** – Main LaTeX manuscript file.  
 
-## **Estructura del Proyecto**  
-📂 **data/** – Archivos de entrada, incluyendo datos de secuenciación.  
-📂 **scripts/** – Scripts en Bash y R para análisis de datos.  
-📂 **results/** – Resultados intermedios y finales del análisis.  
-📄 **README.md** – Este documento.  
-📄 **main.tex** – Documento principal del manuscrito en LaTeX.  
-
-## **Requisitos**  
-- Sistema operativo: Linux o macOS (se recomienda HPC con SLURM).  
-- Herramientas bioinformáticas necesarias:  
+## **Requirements**  
+- Operating system: Linux or macOS (HPC with SLURM recommended).  
+- Required bioinformatics tools:  
   - FastQC  
   - Trim Galore  
   - MultiQC  
@@ -22,46 +20,42 @@ Este proyecto investiga el papel de los pequeños RNAs (sRNAs) en la regulación
   - Samtools  
   - IGV  
   - featureCounts  
+  - R (packages: `DESeq2`, `edgeR`)  
 
-## Instrucciones de Uso
+## **Usage Instructions**  
 
-### 1. Descarga de Datos
-Ejecutar el script para descargar los datos de sRNAs desde GEO/SRA:  
+### **1. Download Data**  
+Run the script to download sRNA sequencing data from GEO/SRA:  
 ```bash
 bash scripts/download_srna_data.sh
 ```
 
-### 2. Control de Calidad y Preprocesamiento 
+### **2. Quality Control and Preprocessing**  
 ```bash
 bash scripts/preprocessing.sh
 ```
 
-### **3. Alineamiento de Secuencias**  
+### **3. Sequence Alignment**  
 ```bash
 bash scripts/alignment.sh
 ```
 
-### **4. Análisis de Expresión Diferencial**  
-Ejecutar en R:  
+### **4. Differential Expression Analysis**  
+Run in R:  
 ```r
 source("scripts/diff_expression_analysis.R")
 ```
 
-### **5. Visualización en IGV**  
-Cargar los archivos BAM en IGV y explorar los patrones de expresión.  
+### **5. Visualization in IGV**  
+Load the BAM files into IGV to explore expression patterns.  
 
-## **Resultados Esperados**  
-- Identificación de sRNAs diferencialmente expresados en mutantes epigenéticos.  
-- Análisis de la relación entre TEs y genes de respuesta a virus.  
-- Integración de datos de metilación y expresión.  
+## **Expected Results**  
+- Identification of differentially expressed sRNAs in epigenetic mutants.  
+- Analysis of the relationship between TEs and virus-responsive genes.  
+- Integration of methylation and expression data.  
 
-## **Autores y Créditos**  
-Este proyecto fue desarrollado por **Miriam Caballero Cerveró**, en colaboración con el grupo *Epigenetic Complexes in Plant Immunity* en I2SysBio.  
+## **Authors and Credits**  
+This project was developed by **Miriam Caballero Cerveró**, in collaboration with the *Epigenetic Complexes in Plant Immunity* group at I2SysBio.  
 
-## **Contacto**  
-📧 [Tu email o enlace a contacto]  
-🔗 [Repositorio del proyecto (si aplica)]  
-
----
-
-¿Quieres que agregue algo más, como detalles sobre cómo instalar las herramientas? 🚀
+## **Contact**  
+📧 miriam.caballero@csic.es  
